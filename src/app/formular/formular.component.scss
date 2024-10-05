@@ -1,0 +1,85 @@
+.formular{
+    
+    background-color: white;
+    height: auto;
+    margin: 30px;               /* Oben und unten 30px, links und rechts automatisch */
+    text-align: center;         /* Text Zentrierung */
+    display: flex;              /* Flex Darstellung für ein Responsives Design */
+    flex-direction: column;     /* Elemente untereinander anordnen */
+    justify-content: center;    /* Horizontale Zentrierung */
+    align-items: center;        /* Vertikale Zentrierung */
+    padding: px;              /* Padding 16px hinzufügen */
+    font-size: 35px;            /* Textgröße erhöhen, auf 18px */
+    line-height: 1.3;           /* Zeilenabstand erhöhen */
+    .zusatzText{
+        font-size: 15px;
+    display: flex;              /* Flex Darstellung für ein Responsives Design */
+    flex-direction: column;     /* Elemente untereinander anordnen */
+    justify-content: center;    /* Horizontale Zentrierung */
+        
+
+        
+    }
+    .sizeRadio{
+        width: 20px;
+        height: 20px;
+        transform: scale(1.5); /* Vergrößert den Button um 50% */
+        
+    }
+        .abholung{
+            display: flex;              /* Flex Darstellung für ein Responsives Design */
+    flex-direction: column;     /* Elemente untereinander anordnen */
+    justify-content: center;  /* Horizontale Zentrierung */
+    .abholungSize{
+        font-size: 20px;
+        display: flex;              /* Flex Darstellung für ein Responsives Design */
+        flex-direction: column;     /* Elemente untereinander anordnen */
+        justify-content: center;    /* Horizontale Zentrierung */
+        
+        .zTR{
+            color: rgba(71, 12, 12, 0.7);
+            font-size: 100%;
+            font-weight: 600;
+            margin: 5px;
+            border-color: rgba(71, 12, 12, 0.7);
+            box-shadow: 2px 2px 2px rgba(71, 12, 12, 0.7);
+            background-color: rgba(0, 0, 0, 0.03);
+            
+        }
+        .zTG{
+            color: green;
+            font-size: 100%;
+            font-weight: 300;
+            margin: 5px;
+            border-color: rgba(12, 71, 30, 0.7);
+            box-shadow: 2px 2px 2px rgba(17, 71, 12, 0.7);
+            background-color: rgba(0, 0, 0, 0.03);
+
+        }
+      
+    }
+       
+
+    .sendButton{
+        position: relative;    
+        font-size: 30px;
+        
+        background-color: rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.3);                        /* Adjusted height */
+        margin-top: 30px;
+        border-radius: 10px;
+
+        &:hover{
+            background-color: rgba(0 , 0, 0, 0.5);
+        }
+    }
+    
+    }
+    
+
+    .ausnahmen{
+        font-size: 25px; 
+        color: rgba(153, 67, 67, 0.5);
+    }
+    
+}

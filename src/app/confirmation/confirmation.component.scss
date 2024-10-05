@@ -1,0 +1,60 @@
+.confirmation {
+    background-color: white;
+    height: auto;
+    margin: 30px; /* Oben und unten 30px, links und rechts automatisch */
+    text-align: center; /* Text Zentrierung */
+    display: flex; /* Flex Darstellung für ein responsives Design */
+    flex-direction: column; /* Elemente untereinander anordnen */
+    justify-content: center; /* Vertikale Zentrierung */
+    align-items: center; /* Horizontale Zentrierung */
+    font-size: 50px; /* Textgröße erhöhen, auf 50px */
+    line-height: 2; /* Zeilenabstand erhöhen */
+    border-color: rgba(12, 71, 30, 0.7);
+    box-shadow: 2px 2px 2px rgba(17, 71, 12, 0.7);
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.zTG {
+    color: green;
+    font-size: 100%;
+    font-weight: 300;
+    margin: 5px;
+}
+.zTB {
+    color: rgb(39, 102, 50);
+    font-size: 100%;
+    font-weight: 300;
+    margin: 5px;
+    text-align: center; /* Optional, da es im übergeordneten Container zentriert wird */
+}
+
+//Responsives Design
+@media (max-width: 768px) {
+    .confirmation {
+        background-color: white;
+        height: auto;
+        margin: 16px; /* Oben und unten 16px, links und rechts automatisch */
+        text-align: center; /* Text Zentrierung */
+        display: flex; /* Flex Darstellung für ein responsives Design */
+        flex-direction: column; /* Elemente untereinander anordnen */
+        justify-content: center; /* Vertikale Zentrierung */
+        align-items: center; /* Horizontale Zentrierung */
+        padding: 10px; /* Padding 10px hinzufügen */
+        font-size: 20px; /* Textgröße erhöhen, auf 20px */
+        line-height: 1.0; /* Zeilenabstand erhöhen */
+    }
+    .zTG {
+        color: green;
+        font-size: 100%;
+        font-weight: 300;
+        margin: 5px;
+        text-align: center; /* Optional, da es im übergeordneten Container zentriert wird */
+    }
+    .zTB {
+        color: rgb(39, 102, 50);
+        font-size: 100%;
+        font-weight: 300;
+        margin: 5px;
+        text-align: center; /* Optional, da es im übergeordneten Container zentriert wird */
+    }
+}

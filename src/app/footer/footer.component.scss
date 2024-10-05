@@ -1,0 +1,7 @@
+.legalNotice{
+    height: 240px;
+    margin: 16px;              /* Oben und unten 16px, links und rechts automatisch */
+    display: flex;                  /* Flex Darstellung für ein Responsives Design */
+    justify-content: center;        /* Horizontale Zentrierung */
+    align-items: center;            /* Vertikale Zentrierung */
+}

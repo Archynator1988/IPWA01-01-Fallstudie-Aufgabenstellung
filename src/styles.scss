@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+.hovermode{
+    
+    &:hover{
+        background-color: rgba(0 , 0, 0, 0.5);
+    }
+}
+.buttonStyle{
+    position: relative;    
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .buttonStyleHeader{
+    position: relative;
+    width: 50%;
+    height: 30px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.01);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    }
+
+    .logoPicture {
+        width: auto;                              /* Use percentage or other valid units */
+        height: auto;                             /* Adjusted height */
+        margin: auto;                             /* Zentriert das Bild horizontal */
+        display: flex;                            /* Flexbox für den Container */
+        justify-content: center;                  /* Horizontale Zentrierung */
+        align-items: center;                      /* Vertikale Zentrierung */
+    }
+    
+
+    //Responsives Design
+    @media (max-width: 768px) {
+        .logoPicture {
+            
+            width: 100%; /* Use percentage or other valid units */
+            height: auto; /* Adjusted height */
+            margin: 16px auto;                   /* Zentriert das Bild horizontal */
+            display: flex;                       /* Flexbox für den Container */
+            justify-content: center;             /* Horizontale Zentrierung */
+            align-items: center;                 /* Vertikale Zentrierung */
+        }
+        
+    
+        .buttonStyle {
+            
+            width: 100%;                         /* Use percentage or other valid units */
+            height: auto;                        /* Adjusted height */
+     
+        }
+    
+        .buttonStyleHeader {
+            
+            width: 100%;                         /* Use percentage or other valid units */
+            height: auto;                        /* Adjusted height */
+           
+            
+        }
+    }
+   

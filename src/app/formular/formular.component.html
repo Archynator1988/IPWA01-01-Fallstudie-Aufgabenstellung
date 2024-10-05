@@ -1,0 +1,98 @@
+<!-- Erstellung des Formulars-->
+
+<!-- Auswahl der Möglichkeiten der Übergabe-->
+<li class="formular">
+  <label for="uebergabeort">Übergabeort:</label>
+  <div>
+    <div class="below">
+      <label for="abholung">Abholung</label>
+      <input type="radio" id="abholung" name="uebergabeart" value="abholung" class="sizeRadio" (change)="ds.value='abholung'"> 
+    </div>
+
+    <div class="below">
+      <label for="geschaeftsstelle">Geschäftsstelle</label>
+      <input type="radio" id="geschaeftsstelle" name="uebergabeart" value="geschaeftsstelle" class="sizeRadio" (change)="ds.value='geschaeftsstelle'"> 
+    </div>
+  </div>
+  
+<!----------------------------------------------------------------------------------------------------------------------------------------->  
+  
+<!-- Auswahl abholung -->
+<div class="abholung" *ngIf="ds.value === 'abholung'">
+   
+    <label for="artDerKleidung">Art der Kleidung:</label>
+    <select (change)="ds.onKleidungChange($event)" kleidung="selectedKleidung">
+      <option *ngFor="let kleidung of ds.kleidungsArten" [value]="kleidung">{{ kleidung }}</option>
+    </select>
+
+    <label for="kriesenGebiet">Aktuelles Krisengebiet:</label>
+    <select (change)="ds.onGebietChange($event)" gebiet="selectedGebiet">
+      <option *ngFor="let gebiet of ds.kGebiet" [value]="gebiet">{{ gebiet }}      
+      </option>
+    </select>
+
+    <b><label for="abholadresse">Abholadresse:</label></b>
+    <div class="zusatzText">Unsere Postleitzahl:  <b>55252</b><br></div>
+    
+    <div class="abholungSize">
+      <label for="abholPLZ">Postleizahl:</label>
+      <input type="text" id="abholAdressePLZ" name="abholAdressePLZ" (input)="ds.onInputPLZ($event)">
+  
+
+      <div *ngIf="!ds.checkPLZ(ds.geschaeftsstellePLZ, ds.abholAdressePLZ )">
+        <div class="zTR">Ihre Postleizahl sollte mit den  Ziffern '55' beginnen<br>
+        und 5 Stellen beinhalten.
+        </div>
+      </div>
+
+      <div *ngIf="ds.checkPLZ(ds.geschaeftsstellePLZ, ds.abholAdressePLZ )">
+        <div class="zTG">Innerhalb unserer Erreichbarkeit.</div>
+      </div>
+
+      <label for="abholAdresseStr">Straße:</label>
+      <input type="text" id="abholAdresseStr" name="abholAdresseStr" (input)="ds.onInputStr($event)">
+    </div>
+ 
+ 
+
+ 
+  <!-- Kleiderspende regestrieren -->
+  <div *ngIf="ds.checkPLZ(ds.geschaeftsstellePLZ, ds.abholAdressePLZ )">
+
+  <a routerLink="/confirmation" class="pointer"><button class="hovermode sendButton confirmationButton" (click)="ds.submitForm()" > Kleiderspende jetzt registrieren!</button></a>
+ 
+  </div>
+</div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- Auswahl Geschäftsstelle-->
+  <div class="abholung" *ngIf="ds.value === 'geschaeftsstelle'">
+   
+    <label for="artDerKleidung">Art der Kleidung:</label>
+    <select (change)="ds.onKleidungChange($event)" kleidung="selectedKleidung">
+      <option *ngFor="let kleidung of ds.kleidungsArten" [value]="kleidung">{{ kleidung }}</option>
+    </select>
+
+
+    <label for="kriesenGebiet">Aktuelles Krisengebiet:</label>
+    <select (change)="ds.onGebietChange($event)" gebiet="selectedGebiet">
+      <option *ngFor="let gebiet of ds.kGebiet" [value]="gebiet">{{ gebiet }}</option>
+    </select>
+
+  <!-- Kleiderspende regestrieren -->
+  <a routerLink="/confirmation-local" class="pointer"><button class="hovermode sendButton confirmationButton" (click)="ds.submitForm()" > Kleiderspende jetzt registrieren!</button></a>
+  </div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- Zusätzlicher Kommentar-->
+  <br>
+  <div class="ausnahmen"> <b>Bitte nehmen Sie zur Kenntnis, dass aus hygienischen Gründen Unterwäsche nicht angenommen wird.<br><br> Vielen Dank trotzdem!</b></div>
+</li>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
