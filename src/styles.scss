@@ -2,6 +2,7 @@
     
     &:hover{
         background-color: rgba(0 , 0, 0, 0.5);
+        cursor: pointer;
     }
 }
 .buttonStyle{
@@ -25,8 +26,8 @@
     }
 
     .logoPicture {
-        width: auto;                              /* Use percentage or other valid units */
-        height: auto;                             /* Adjusted height */
+        width: auto;                              /* Breite automatisiert */
+        height: auto;                             /* Höhe automatisiert */
         margin: auto;                             /* Zentriert das Bild horizontal */
         display: flex;                            /* Flexbox für den Container */
         justify-content: center;                  /* Horizontale Zentrierung */
@@ -35,31 +36,25 @@
     
 
     //Responsives Design
-    @media (max-width: 768px) {
+    @media (max-width: 768px) {                  /* Media Query für Bildschirme mit einer maximalen Breite von 768 Pixeln */
+
         .logoPicture {
-            
-            width: 100%; /* Use percentage or other valid units */
-            height: auto; /* Adjusted height */
-            margin: 16px auto;                   /* Zentriert das Bild horizontal */
+            width: 100%;                         /* Verwendet 100% für die Breite */
+            height: auto;                        /* Höhe automatisch anpassen */
+            margin: 16px auto;                   /* Fügt oben und unten einen Abstand von 16 Pixeln hinzu und zentriert das Bild horizontal.*/
             display: flex;                       /* Flexbox für den Container */
             justify-content: center;             /* Horizontale Zentrierung */
             align-items: center;                 /* Vertikale Zentrierung */
         }
-        
     
         .buttonStyle {
-            
-            width: 100%;                         /* Use percentage or other valid units */
-            height: auto;                        /* Adjusted height */
-     
+            width: 100%;                         /* Verwendet 100% für die Breite */
+            height: auto;                        /* Höhe automatisch anpassen */
         }
     
         .buttonStyleHeader {
-            
-            width: 100%;                         /* Use percentage or other valid units */
-            height: auto;                        /* Adjusted height */
-           
-            
+            width: 100%;                         /* Verwendet 100% für die Breite */
+            height: auto;                        /* Höhe automatisch anpassen */
         }
-    }
+    }       
    

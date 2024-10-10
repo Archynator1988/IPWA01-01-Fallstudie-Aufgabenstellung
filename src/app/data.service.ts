@@ -31,7 +31,7 @@ export class DataService {
     
   });
 
-  //  // Form group für die Kriesengebietsauswahl
+  // Form group für die Kriesengebietsauswahl
   kriGebiet = new FormGroup({
     selectedGebiet: new FormControl(''),    // Der Initale Wert wurde mit absicht frei gelassen
   });
@@ -53,7 +53,7 @@ export class DataService {
   }
   
    
-  // onInput Befehle zum Auslesen der jeweiligen Variablen welcher eingegeben wird
+  // onInput Befehle zum Auslesen des jeweiligen Werts, welcher eingegeben wird
   onInputKleidung(event: Event): void {
     const inputElementKleidung = event.target as HTMLInputElement;
     this.selectedKleidung  = inputElementKleidung.value;

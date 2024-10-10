@@ -18,7 +18,7 @@ export class ConfirmationLocalComponent {
   geschaeftsstellePLZ: string = '';
   geschaeftsstelleStr: string = '';
 //----------------------------------------------------------------------
-  //formatiert, sodass sie im Frontend direkt verwendet werden können.
+  //Formatiert, sodass sie im Frontend direkt verwendet werden können.
   constructor(private ds: DataService) {
     this.formularDetailsKleidung = `Kleidung: ${this.ds.selectedKleidung}`;
     this.formularDetailsGebiet = `Gebiet: ${this.ds.selectedGebiet}`;

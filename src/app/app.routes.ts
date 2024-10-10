@@ -1,9 +1,6 @@
 import {Routes } from '@angular/router';
 import {RouterModule } from '@angular/router';
 import {NgModule } from '@angular/core';
-
-
-
 import { ContentComponent } from './content/content.component';
 import { FormularComponent } from './formular/formular.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';

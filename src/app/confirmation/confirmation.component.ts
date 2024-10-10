@@ -36,12 +36,12 @@ export class ConfirmationComponent implements OnInit{
 
   updateTime(): void {
     const now = new Date();
-    this.aktuelleUhrzeit = now.toLocaleTimeString(); // Aktuelle Uhrzeit im lokalen Format
+    this.aktuelleUhrzeit = now.toLocaleTimeString();      // Aktuelle Uhrzeit im lokalen Format
   }
 
   updateDate(): void {
     const now = new Date();
-    this.aktuellesDatum = now.toLocaleDateString(); // Gibt das aktuelle Datum im lokalen Format zurück
+    this.aktuellesDatum = now.toLocaleDateString();       // Gibt das aktuelle Datum im lokalen Format zurück
   }
 }
   

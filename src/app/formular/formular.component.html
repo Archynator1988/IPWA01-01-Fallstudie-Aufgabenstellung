@@ -1,5 +1,5 @@
 <!-- Erstellung des Formulars-->
-
+ 
 <!-- Auswahl der Möglichkeiten der Übergabe-->
 <li class="formular">
   <label for="uebergabeort">Übergabeort:</label>
@@ -31,8 +31,8 @@
       </option>
     </select>
 
-    <b><label for="abholadresse">Abholadresse:</label></b>
-    <div class="zusatzText">Unsere Postleitzahl:  <b>55252</b><br></div>
+    <b><label for="abholadresse">Unsere Postleitzahl:</label></b>
+    <div class="zusatzText">55252<br></div>
     
     <div class="abholungSize">
       <label for="abholPLZ">Postleizahl:</label>
@@ -42,8 +42,8 @@
       <div *ngIf="!ds.checkPLZ(ds.geschaeftsstellePLZ, ds.abholAdressePLZ )">
         <div class="zTR">Ihre Postleizahl sollte mit den  Ziffern '55' beginnen<br>
         und 5 Stellen beinhalten.
-        </div>
       </div>
+    </div>
 
       <div *ngIf="ds.checkPLZ(ds.geschaeftsstellePLZ, ds.abholAdressePLZ )">
         <div class="zTG">Innerhalb unserer Erreichbarkeit.</div>
@@ -57,10 +57,11 @@
 
  
   <!-- Kleiderspende regestrieren -->
-  <div *ngIf="ds.checkPLZ(ds.geschaeftsstellePLZ, ds.abholAdressePLZ )">
+  <div *ngIf="ds.selectedKleidung && ds.selectedGebiet && ds.abholAdresseStr!== ''">
+    <div *ngIf="ds.checkPLZ(ds.geschaeftsstellePLZ, ds.abholAdressePLZ )">
 
-  <a routerLink="/confirmation" class="pointer"><button class="hovermode sendButton confirmationButton" (click)="ds.submitForm()" > Kleiderspende jetzt registrieren!</button></a>
- 
+  <a routerLink="/confirmation" class="pointer"><button class="hovermode sendButton" (click)="ds.submitForm()" > Kleiderspende jetzt registrieren!</button></a>
+    </div>
   </div>
 </div>
 
@@ -81,8 +82,9 @@
     </select>
 
   <!-- Kleiderspende regestrieren -->
-  <a routerLink="/confirmation-local" class="pointer"><button class="hovermode sendButton confirmationButton" (click)="ds.submitForm()" > Kleiderspende jetzt registrieren!</button></a>
-  </div>
+  <div *ngIf="ds.selectedKleidung && ds.selectedGebiet !== ''">
+  <a routerLink="/confirmation-local" class="pointer"><button class="hovermode sendButton" (click)="ds.submitForm()" > Kleiderspende jetzt registrieren!</button></a>
+  </div></div>
 
 <!----------------------------------------------------------------------------------------------------------------------------------------->
 
